@@ -22,7 +22,7 @@ export const taskSlice = createSlice({
         ]
     },
     reducers:{
-        statusUpateBtn: (state, action)=> {
+        statusUpdateBtn: (state, action)=> {
             const { date, id } = action.payload
 
             const dateGroup = state.tasks.find((item) => item.date === date )
@@ -38,6 +38,6 @@ export const taskSlice = createSlice({
     },
 })
 
-export const { statusUpateBtn } = taskSlice.actions
+export const { statusUpdateBtn } = taskSlice.actions
 
 export default taskSlice.reducer

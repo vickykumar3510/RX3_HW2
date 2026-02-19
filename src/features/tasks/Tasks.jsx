@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { statusUpateBtn } from "./taskSlice";
+import { statusUpdateBtn } from "./taskSlice";
 
 const Tasks = () => {
     const dispatch = useDispatch()
@@ -18,7 +18,7 @@ const Tasks = () => {
                             {task.tasks.map((t) => (
                                 <li key={t.id}>
                                    <p>{t.task}</p>
-                                   <button onClick={() => dispatch(statusUpateBtn({ date: task.date, id: t.id}))}>{t.status}</button>
+                                   <button onClick={() => dispatch(statusUpdateBtn({ date: task.date, id: t.id}))}>{t.status}</button>
                                 </li>
                             ))}
                         </ul>
